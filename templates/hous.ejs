@@ -79,7 +79,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky-dark" id="navbar-sticky">
         <div class="container">
-            <a class="logo text-uppercase" href="#home">
+            <a class="logo text-uppercase" href="/">
                 <img alt="" src="https://www.una.edu/brand/images/logo/round/UNA-roundLionPurpleW.png" width="50px"/>
             </a>
             <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
@@ -88,13 +88,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ms-auto navbar-center" id="mySidenav">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost:5500/">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">Transportation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#http://localhost:5500/#features">Features</a>
+                        <a class="nav-link" href="#features">Features</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#testimonial">Testimonial</a>
@@ -102,6 +102,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -135,41 +136,42 @@
                     <h2 class="text-center mb-5">Housing for Family</h2>
                     <p style="font-size: larger;">Being international students without social security numbers, I've selected several family-friendly apartments for you. These options are particularly accommodating as they do not necessitate a social security number for the rental process.</p><br>
 
-                    <div class="row">
-                        <div class="col-md-4">
+                    <!-- Housing for Family Section End -->
+
+                    <!-- University Apartment Form -->
+                    <section id="university-apartment-form" class="py-5">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4">
                             <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">University Apartment</h5>
-                                    <!-- Form for University Apartment -->
-                                    <form method="POST" action="/addName">
-                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                                        <input name="fname" placeholder="First Name">
-                                        <input name="lname" placeholder="Last Name">
-                                        <input name="phone" placeholder="Phone Number">
-                                        <input name="email" placeholder="Email">
-                                        <div class="mb-3">
-                                            <label for="noteFamily" class="form-label">Note</label>
-                                            <textarea class="form-control" id="noteFamily" name="noteFamily"></textarea>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="apartmentTypeIndividuals" class="form-label">Apartment Type</label>
-                                            <select class="form-select" id="apartmentTypeIndividuals" name="apartmentTypeIndividuals">
-                                                <option value="apartment">Oak Rage - Florance</option>
-                                                <option value="apartment">Seville Place - Florance</option>
-                                                <option value="apartment">Arbor Village - Muscle Sholse</option>
-                                            </select>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    <pre>
-                                      </form>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </section>
+                              <div class="card-body">
+                                <h5 class="card-title">University Apartment</h5>
+                                <form method="POST" action="/addName">
+                                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                  <input name="fname" placeholder="First Name">
+                                  <input name="lname" placeholder="Last Name">
+                                  <input name="phone" placeholder="Phone Number">
+                                  <input name="email" placeholder="Email">
+                                  <div class="mb-3">
+                                    <label for="noteFamily" class="form-label">Note</label>
+                                    <textarea class="form-control" id="noteFamily" name="noteFamily"></textarea>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="apartmentSelect" class="form-label">Select an Apartment</label>
+                                    <select class="form-select" id="apartmentSelect" name="apartmentSelect">
+                                      <option value="Oak Rage - Florance">Oak Rage - Florance</option>
+                                      <option value="Seville Place - Florance">Seville Place - Florance</option>
+                                      <option value="Arbor Village - Muscle Sholse">Arbor Village - Muscle Sholse</option>
+                                    </select>
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
                                     <!-- Housing for Family Section End -->
 
                                     <!-- Individuals Start -->
@@ -183,7 +185,8 @@
                                             <h4>1. Residence Halls</h4>
                                             <p>UNA offers modern residence halls designed to enhance students' educational experiences. These halls foster a sense of community and provide a supportive living environment. If you're looking for a traditional on-campus housing experience, residence halls are a great choice.</p><br>
                                             <h4>2. University Apartments</h4>
-                                            <p>In addition to residence halls, UNA also provides university apartments. These apartments offer a different living experience, combining the convenience of on-campus housing with more independent living arrangements. </p>
+                                            <p>In addition to residence halls, UNA also provides university apartments. These apartments offer a different living experience, combining the convenience of on-campus housing with more independent living arrangements.</p>
+          
                                             <p>If you have specific questions, feel free to reach out to the Housing & Residence Life office:</p>
                                             <ul>
                                                 <li>Phone: 256-765-5558</li>
